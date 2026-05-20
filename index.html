@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Axel Calus | High-Performance Automotive Engineering Portfolio</title>
+  <meta name="description" content="Axel Calus - Automotive Engineering student specialized in high-performance engines, aerodynamics, and vehicle design. View projects, education, and skills.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Particle Canvas -->
+  <canvas id="canvas-bg"></canvas>
+
+  <!-- Navigation Header -->
+  <header id="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        Axel Calus<span>.</span><span class="logo-dot"></span>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle Navigation Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#about" class="active">About</a></li>
+        <li><a href="#experience">Experience & Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-btn">Get In Touch</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Open to Opportunities
+        </div>
+        <h1>Axel Calus</h1>
+        <div class="hero-title">Engineering Student</div>
+        <p class="hero-desc">
+          Passionate about motorsports and aerodynamics. Focused on building a successful career in high-performance automotive engineering—specializing in thermic/electric engines, thermodynamics, and advanced design tools.
+        </p>
+        <div class="cta-group">
+          <a href="#projects" class="btn-primary">
+            View Projects
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="cv.pdf" target="_blank" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            View CV
+          </a>
+          <a href="#contact" class="btn-secondary">Contact Me</a>
+        </div>
+        
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/axel-calus-503648335" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+          </a>
+          <a href="#" class="social-link" title="GitHub (Placeholder)">
+            <svg viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-visual">
+        <div class="engine-ring ring-outer"></div>
+        <div class="engine-ring ring-inner"></div>
+        <div class="avatar-wrapper">
+          <div class="avatar-container">
+            <!-- Looks for local profile picture first. If missing, CSS fallback is shown -->
+            <img src="profile.jpg" alt="Axel Calus" class="avatar-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="avatar-fallback" style="display: none;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" stroke-dasharray="4 4"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                <path d="M2 12h20"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Banner Section -->
+  <section class="hero-quote-shell">
+    <div class="hero-quote">
+      <blockquote class="hero-quote__text">
+        I couldn't find the sports car of my dreams, so I built it myself.
+      </blockquote>
+      <cite class="hero-quote__author">— Ferdinand Porsche</cite>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section" id="about">
+    <div class="section-header">
+      <span class="section-tag">Overview</span>
+      <h2 class="section-title">About Me</h2>
+    </div>
+    
+    <div class="about-grid">
+      <div class="about-text">
+        <p>
+          I am a 21-year-old engineering student focused on building a successful career in high-performance automotive engineering. My academic and personal projects center around modeling complex thermodynamic systems, conducting fluid dynamic analyses, and developing physical tools that aid in precise vehicle setups.
+        </p>
+        <p>
+          From restoring vintage cars to volunteering as a youth tennis trainer, my hobbies emphasize patience, precision, and problem-solving. Whether simulating hydrogen engines or coding numerical models, I aim to merge engineering excellence with automotive aesthetics.
+        </p>
+        
+        <div class="profile-details">
+          <div class="detail-item">
+            <span class="detail-label">Age</span>
+            <span class="detail-val">21 Years Old</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Location</span>
+            <span class="detail-val">France / USA</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Focus</span>
+            <span class="detail-val">Automotive & Aero</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Status</span>
+            <span class="detail-val">ESTACA / Purdue</span>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="hobbies-title">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+          Interests & Hobbies
+        </h3>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+            <h4 class="hobby-name">Automobiles</h4>
+            <p class="hobby-desc">Passionate about classic cars. Love restoring older engines and analyzing mechanical systems.</p>
+          </div>
+          
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 0 1-5.66-2.34A8.06 8.06 0 0 0 10 14a4 4 0 0 1 4-4 8.06 8.06 0 0 0 3.66-3.66A8 8 0 0 1 12 20z"/></svg>
+            </div>
+            <h4 class="hobby-name">Tennis</h4>
+            <p class="hobby-desc">Playing competitively for over 14 years. Rank: 3/6. National teams championship competitor.</p>
+          </div>
+          
+          <div class="hobby-card">
+            <div class="hobby-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+            </div>
+            <h4 class="hobby-name">Music</h4>
+            <p class="hobby-desc">Enjoy playing guitar and piano for leisure, fueling creativity outside the engineering lab.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Education Section -->
+  <section class="section" id="experience">
+    <div class="section-header">
+      <span class="section-tag">Timeline</span>
+      <h2 class="section-title">Experience & Education</h2>
+    </div>
+    
+    <div class="timeline-container">
+      <!-- 2026 Purdue -->
+      <div class="timeline-item education-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Semester Abroad</h3>
+              <div class="timeline-org">Purdue University (Lafayette, Indiana)</div>
+            </div>
+            <span class="timeline-date">01/2026 - 05/2026</span>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li><strong>Advanced Academic Track:</strong> Immersed in core mechanical engineering studies, focusing on <em>Computational Aerodynamics</em> (AAE 512), <em>Combustion</em> (ME 525), <em>Engineering Economics</em> (IE 343), and <em>Entrepreneurship</em> (ENTR 200).</li>
+              <li><strong>Senior Design Project (ME 463):</strong> Fully designed, manufactured, and prototyped an automated mechanical docking station to lock personal bikes and scooters, involving manual milling, machining, and 3D printing iterations.</li>
+              <li><strong>Campus Integration:</strong> Immersed in Boilermaker campus life, training weekly at the indoor tennis club.</li>
+            </ul>
+            <div class="timeline-media">
+              <img src="purdue.png" alt="Axel Calus at Purdue University - Campus and Engineering Lab Work">
+              <img src="docking_lock.jpg" alt="Automated Docking Station - Sliding Lock Mechanism Close-up">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 Club Project HYCE -->
+      <div class="timeline-item project-type">
+        <div class="timeline-badge" style="color: var(--accent-cyan);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Club Project (HYCE)</h3>
+              <div class="timeline-org">Hydrogen Internal Combustion Engine Vehicle</div>
+            </div>
+            <span class="timeline-date">09/2025 - Present</span>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li><strong>Objective:</strong> Design and build a hydrogen internal combustion engine car to run the Nürburgring for a lap record.</li>
+              <li><strong>Responsibility:</strong> Actively simulating the combustion engine parameters using specialized engineering software, including MATLAB and Lotus Engineering.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 Vulcan Alpha -->
+      <div class="timeline-item job-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Engineering Intern</h3>
+              <div class="timeline-org">VULCAN ALPHA GmbH (Nürburgring, Germany)</div>
+            </div>
+            <span class="timeline-date">06/2025 (2 Months)</span>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Gained hands-on experience at a specialized firm focused on designing advanced aerodynamic solutions for motorsports.</li>
+              <li>Focused on engineering modifications designed for track performance, downforce management, and aerodynamics.</li>
+            </ul>
+            <div class="timeline-media">
+              <img src="vulcan_alpha.jpg" alt="Axel Calus with the Vulcan Alpha Team and Carbon Fiber Racecar">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 GR Motors -->
+      <div class="timeline-item job-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Mechanics Intern</h3>
+              <div class="timeline-org">GR MOTORS (Angers, France)</div>
+            </div>
+            <span class="timeline-date">06/2024 (1 Month)</span>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Deepened practical mechanical skills at a service garage specialized in Porsche sports cars and high-performance engines.</li>
+              <li>Worked closely on engine servicing, teardowns, and mechanical diagnoses.</li>
+            </ul>
+            <div class="timeline-media">
+              <img src="porsche_gt3.jpg" alt="Porsche GT3 RS rear wing adjustment">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 Crosskart Project -->
+      <div class="timeline-item project-type">
+        <div class="timeline-badge" style="color: var(--accent-cyan);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Suspension Calibration Project</h3>
+              <div class="timeline-org">Academic Project</div>
+            </div>
+            <span class="timeline-date">02/2024 - 06/2024</span>
+          </div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Co-created a custom hardware tool in a 4-person team to quickly measure the parallelism and wheel camber of a Crosskart chassis.</li>
+              <li>Engineered, calibrated, and welded components directly for track-ready deployment.</li>
+            </ul>
+            <div class="timeline-media">
+              <img src="crosskart.jpg" alt="Crosskart chassis ready for track calibration">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 Car Restoration -->
+      <div class="timeline-item project-type">
+        <div class="timeline-badge" style="color: var(--accent-cyan);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Vintage Car Restoration</h3>
+              <div class="timeline-org">Personal Project</div>
+            </div>
+            <span class="timeline-date">05/2024 - Present</span>
+          </div>
+          <div class="timeline-desc">
+            Acquired, repaired, and re-commissioned my grandmother's barn-find Peugeot 309 (dormant for 10 years) to use as my daily driver. Deepened knowledge in older mechanical systems, electrical wiring, and chassis maintenance.
+            <div class="timeline-media">
+              <img src="peugeot.jpg" alt="Vintage Peugeot 309 on a car trailer during restoration project">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 ESTACA -->
+      <div class="timeline-item education-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">ESTACA - Graduate School of Transport Engineering</h3>
+              <div class="timeline-org">Laval, France</div>
+            </div>
+            <span class="timeline-date">2021 - 2027</span>
+          </div>
+          <div class="timeline-desc">
+            Pursuing a Master of Science in Engineering with a **Specialization in Automotive Engineering** (covering electric/thermic engines, vehicle dynamics, aerodynamics, thermodynamics, and structural architecture).
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 Porsche Center -->
+      <div class="timeline-item job-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Service Center Intern</h3>
+              <div class="timeline-org">PORSCHE SERVICE CENTER (Poitiers, France)</div>
+            </div>
+            <span class="timeline-date">07/2023 (1 Month)</span>
+          </div>
+          <div class="timeline-desc">
+            First formal introduction to sports car servicing and maintenance. Assisted technicians with fundamental servicing tasks: engines, brakes, transmission lines, and tires.
+          </div>
+          <div class="timeline-media">
+            <img src="porsche_garage.jpg" alt="Porsche Service Center Workshop with raised sports cars">
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021-2022 Tennis Trainer -->
+      <div class="timeline-item job-type">
+        <div class="timeline-badge" style="color: var(--accent-orange);">
+          <div class="timeline-badge-dot"></div>
+        </div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <div>
+              <h3 class="timeline-role">Youth Tennis Trainer</h3>
+              <div class="timeline-org">Volunteering</div>
+            </div>
+            <span class="timeline-date">2021 - 2022</span>
+          </div>
+          <div class="timeline-desc">
+            Coached children between 4 and 7 years old weekly. Developed strong communication skills, patience, and organization.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Grid Showcase -->
+  <section class="section" id="projects">
+    <div class="section-header">
+      <span class="section-tag">Featured Works</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+    
+    <div class="filter-tabs">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="internship">Internships</button>
+      <button class="filter-btn" data-filter="club">Academic & Club</button>
+      <button class="filter-btn" data-filter="personal">Personal</button>
+    </div>
+    
+    <div class="projects-grid">
+      <!-- Project 1: HYCE -->
+      <div class="project-card club">
+        <div class="project-img-container">
+          <div class="project-placeholder-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <div class="project-tech-bar">
+            <span class="tech-tag">MATLAB</span>
+            <span class="tech-tag">Lotus Eng.</span>
+            <span class="tech-tag">Simulations</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Club Project</div>
+          <h3 class="project-title">Hydrogen Engine Simulator (HYCE)</h3>
+          <p class="project-description">
+            Modeling a hydrogen-powered internal combustion engine to break the Nürburgring lap record. Simulating internal thermodynamics, combustion rates, and optimization parameters.
+          </p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/in/axel-calus-503648335" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              View Update
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Project 2: Aerodynamics at Vulcan Alpha -->
+      <div class="project-card internship">
+        <div class="project-img-container">
+          <img src="vulcan_alpha.jpg" alt="Vulcan Alpha Internship Team" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Aerodynamics</span>
+            <span class="tech-tag">OpenFOAM</span>
+            <span class="tech-tag">CFD</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Internship</div>
+          <h3 class="project-title">Vulcan Alpha Aerodynamics Study</h3>
+          <p class="project-description">
+            Participating in aerodynamics engineering modifications at the Nürburgring. Designing bodywork solutions to optimize downforce, drag reduction, and thermal airflow properties.
+          </p>
+          <div class="project-links">
+            <span class="project-link" style="opacity: 0.6; cursor: default;">
+              NDA Restrained
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Porsche GT3 Servicing (GR Motors) -->
+      <div class="project-card internship">
+        <div class="project-img-container">
+          <img src="porsche_gt3.jpg" alt="Porsche GT3 RS Sports Car" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Porsche Engines</span>
+            <span class="tech-tag">Telemetry</span>
+            <span class="tech-tag">Maintenance</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Internship</div>
+          <h3 class="project-title">Porsche Sports Servicing (GR Motors)</h3>
+          <p class="project-description">
+            Hands-on support for specialized Porsche mechanical maintenance. Assisting with cylinder compression tests, suspension alignment, and high-performance exhaust calibrations.
+          </p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/in/axel-calus-503648335" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              View Connection
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: Porsche Service Center operations -->
+      <div class="project-card internship">
+        <div class="project-img-container">
+          <img src="porsche_garage.jpg" alt="Porsche Service Center workshop" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Diagnostics</span>
+            <span class="tech-tag">Mechanics</span>
+            <span class="tech-tag">Porsche Cars</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Internship</div>
+          <h3 class="project-title">Porsche Workshop Operations</h3>
+          <p class="project-description">
+            Assisting technical mechanics with chassis maintenance, gear servicing, brake caliper replacements, and digital vehicle diagnostics systems inside a formal Porsche center.
+          </p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/in/axel-calus-503648335" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              View Connection
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: Purdue Senior Design (Automated Docking Station) -->
+      <div class="project-card club">
+        <div class="project-img-container">
+          <img src="docking_build.jpg" alt="Automated Docking Station electrical assembly and actuators" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Actuators</span>
+            <span class="tech-tag">Milling & CNC</span>
+            <span class="tech-tag">Electronics</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Academic Project</div>
+          <h3 class="project-title">Automated Docking Station</h3>
+          <p class="project-description">
+            Fully designed and built a heavy-duty automated docking station for bikes and scooters. Features custom rack-and-pinion locking columns, battery-backed electronics, microcontroller integration, and precision-milled aluminum lock slides.
+          </p>
+          <div class="project-links">
+            <a href="https://www.linkedin.com/in/axel-calus-503648335" target="_blank" class="project-link">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+              View Update
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: Camber & Parallelism tool -->
+      <div class="project-card club">
+        <div class="project-img-container">
+          <img src="crosskart.jpg" alt="Crosskart calibration vehicle" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Fusion</span>
+            <span class="tech-tag">Welding</span>
+            <span class="tech-tag">Suspensions</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Academic Project</div>
+          <h3 class="project-title">Crosskart Calibration Hardware</h3>
+          <p class="project-description">
+            Designed and built a physical mechanical alignment rig in a 4-person team. The device allows instant calibration of camber, caster, and toe settings on racing Crosskarts.
+          </p>
+          <div class="project-links">
+            <a href="#" class="project-link">
+              Read Report
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 7: Grandma's Barn Find -->
+      <div class="project-card personal">
+        <div class="project-img-container">
+          <img src="peugeot.jpg" alt="Peugeot 309 vintage car restoration on trailer" class="project-img">
+          <div class="project-tech-bar">
+            <span class="tech-tag">Restoration</span>
+            <span class="tech-tag">Peugeot 309</span>
+            <span class="tech-tag">Electrics</span>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-type-badge">Personal Project</div>
+          <h3 class="project-title">Peugeot 309 Barn Find Restoration</h3>
+          <p class="project-description">
+            Fully restored my grandmother's dormant Peugeot 309 kept in storage for a decade. Disassembled the engine head, flushed fuel lines, re-wired electrics, and calibrated brakes for daily road certification.
+          </p>
+          <div class="project-links">
+            <a href="#" class="project-link">
+              View Log
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-header">
+      <span class="section-tag">Expertise</span>
+      <h2 class="section-title">Technical Skills</h2>
+    </div>
+    
+    <div class="skills-container">
+      <!-- Softwares -->
+      <div class="skills-column">
+        <h3 class="skills-col-title">
+          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2m-2 10h-4v4h-2v-4H7v-2h4V7h2v4h4v2z"/></svg>
+          Software Tools
+        </h3>
+        <div class="skills-list">
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">Fusion</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="85%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">SolidWorks / 3D Experience</span>
+              <span class="skill-level">Advanced</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="88%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">MATLAB</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="80%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">Blender</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">OpenFOAM (CFD)</span>
+              <span class="skill-level">Competent</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="60%"></div></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Coding -->
+      <div class="skills-column">
+        <h3 class="skills-col-title">
+          <svg viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          Coding & Modeling
+        </h3>
+        <div class="skills-list">
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">C++</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="75%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">C</span>
+              <span class="skill-level">Proficient</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="70%"></div></div>
+          </div>
+          <div class="skill-bar-container">
+            <div class="skill-info">
+              <span class="skill-name">VBA (Excel automation)</span>
+              <span class="skill-level">Intermediate</span>
+            </div>
+            <div class="skill-track"><div class="skill-fill" data-width="65%"></div></div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Languages -->
+      <div class="skills-column">
+        <h3 class="skills-col-title">
+          <svg viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7l1.62-4.33L19.12 17h-3.24z"/></svg>
+          Languages
+        </h3>
+        <div class="lang-list">
+          <div class="lang-item">
+            <span class="lang-name">French</span>
+            <span class="lang-prof">Native</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Romanian</span>
+            <span class="lang-prof">Native</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">English</span>
+            <span class="lang-prof">Fluent (TOEIC: 960)</span>
+          </div>
+          <div class="lang-item">
+            <span class="lang-name">Spanish</span>
+            <span class="lang-prof">Limited Professional</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="section-header">
+      <span class="section-tag">Connectivity</span>
+      <h2 class="section-title">Get In Touch</h2>
+    </div>
+    
+    <div class="contact-container">
+      <div class="contact-info-panel">
+        <p style="color: var(--text-secondary); margin-bottom: 10px;">
+          I am eager to contribute to innovative automotive, aerospace, or mechanical teams. Drop me a line if you're interested in working together.
+        </p>
+        
+        <div class="contact-card-wrap">
+          <div class="contact-detail-block">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Email</div>
+              <a href="mailto:calusaxel@hotmail.com" class="contact-value">calusaxel@hotmail.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-detail-block">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79a15.15 15.15 0 0 0 6.5 6.5l2.2-2.2c.27-.27.67-.36 1.01-.24a11.36 11.36 0 0 0 3.58.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.58c.11.34.02.74-.24 1.01l-2.2 2.2z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Phone</div>
+              <a href="tel:+33768246120" class="contact-value">+33 7 68 24 61 20</a>
+            </div>
+          </div>
+          
+          <div class="contact-detail-block">
+            <div class="contact-icon-box">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+            </div>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value" style="font-size: 0.95rem;">8 Rue des Castors, 44450 Saint Julien de Concelles, France</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form-panel">
+        <form id="contactForm" novalidate>
+          <div class="form-group">
+            <label for="formName">Name</label>
+            <input type="text" id="formName" class="form-control" placeholder="Your Name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="formEmail">Email Address</label>
+            <input type="email" id="formEmail" class="form-control" placeholder="yourname@domain.com" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="formSubject">Subject</label>
+            <input type="text" id="formSubject" class="form-control" placeholder="Inquiry Subject" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="formMsg">Message</label>
+            <textarea id="formMsg" class="form-control" placeholder="Write your message here..." required></textarea>
+          </div>
+          
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; border: none; cursor: pointer;">
+            Send Transmission
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+          
+          <div id="formStatus" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-logo">
+        Axel Calus<span>.</span>
+      </div>
+      <div class="footer-text">
+        &copy; 2026 Axel Calus. Designed for performance and aerodynamics.
+      </div>
+      <div class="scroll-top" id="scrollTopBtn" title="Back to Top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
