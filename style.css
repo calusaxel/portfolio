@@ -262,11 +262,11 @@ header.scrolled {
 
 /* Hero Section */
 .hero {
-  min-height: 80vh;
+  min-height: auto;
   display: flex;
   align-items: center;
   position: relative;
-  padding: 140px 24px 60px;
+  padding: 120px 24px 40px;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -523,7 +523,7 @@ header.scrolled {
 
 /* Global Section Styles */
 .section {
-  padding: 120px 24px;
+  padding: 80px 24px;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
@@ -568,6 +568,9 @@ header.scrolled {
 }
 
 /* About Section */
+#about {
+  padding-top: 30px;
+}
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -852,7 +855,7 @@ header.scrolled {
 }
 
 .timeline-media img {
-  height: 180px;
+  height: 240px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
