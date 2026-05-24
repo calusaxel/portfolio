@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.thickness = 0.5 + Math.random() * 1.2;
       // Fade edges based on screen y coordinates (less visible near center for content readability)
       this.opacity = 0.08 + Math.random() * 0.12;
-      this.color = Math.random() > 0.6 ? '#0098a6' : '#ff431a'; // Orange & Cyan flows
+      this.color = Math.random() > 0.6 ? '#00a8cc' : '#ff4500'; // Orange & Cyan flows
     }
 
     update() {
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Draw engineering coordinate lines (Grid overlay)
   function drawTelemetryGrid() {
-    ctx.strokeStyle = 'rgba(0, 0, 0, 0.03)';
+    ctx.strokeStyle = 'rgba(15, 23, 42, 0.025)';
     ctx.lineWidth = 1;
     const gridSize = 80;
 
