@@ -521,39 +521,6 @@ header.scrolled {
   to { transform: rotate(-360deg); }
 }
 
-/* Quote Section */
-.hero-quote-shell {
-  padding: 40px 24px;
-  max-width: 1400px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.hero-quote {
-  border-left: 2px solid var(--accent-cyan);
-  padding: 8px 0 8px 24px;
-  max-width: 650px;
-}
-
-.hero-quote__text {
-  font-family: var(--font-body);
-  font-size: 1.15rem;
-  font-weight: 300;
-  line-height: 1.5;
-  color: var(--text-primary);
-  font-style: italic;
-  margin-bottom: 6px;
-}
-
-.hero-quote__author {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 /* Global Section Styles */
 .section {
   padding: 120px 24px;
