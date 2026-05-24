@@ -885,7 +885,7 @@ header.scrolled {
 }
 
 .timeline-media img {
-  height: 90px;
+  height: 180px;
   object-fit: cover;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border-color);
